@@ -4,7 +4,7 @@
 
 }
 body{
-    background-color: rgb(94, 206, 189);
+background-color:lightblue;
     text-align: center;
 }
 .container{
@@ -33,20 +33,24 @@ body{
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
     font-size: 10vh;
-    color: rgb(43, 89, 12);
-    background-color: rgb(193, 193, 74);
+    color: rgb(9, 18, 3);
+    background-color:  #f5f5f5;
 }
 .resetbutton{
-    padding: 1rem;
+    padding: 1em;
     font-size: 1.25rem;
     border-radius: 0.5rem;
-    background-color:#191913;
-    color: white;
+    background-color:#010e04;
+    color: #f5f5f5;
 }
 #msg{
-    color: blue;
+    color: #1e9730;
     font-size: 8vmin;
 }
 .hide{
     display: none;
+}
+h1{
+    color: #33393f;
+    font-size: 50px;
 }
