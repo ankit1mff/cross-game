@@ -15,11 +15,6 @@ const winpattern =[
     [3,4,5],
     [6,7,8]
 ]
-const resetGame = () => {
-    turnO = true;
-    enableBoxes();
-    msgcontainer.classList.add("hide");
-}
 
 boxes.forEach((box)=> {
     box.addEventListener("click", ()=>{
@@ -49,7 +44,7 @@ boxes.forEach((box)=> {
         }
     }
 const showWinner = (winner) =>{
-    msg.innerText =`congratulations,winner is ${winner}`;
+    msg.innerText =`congratulations winner is ${winner}`;
     msgcontainer.classList.remove("hide");
     disableBoxes();
 }
@@ -65,5 +60,10 @@ const chekWinner = () => {
             }
         }
     }
+}
+const resetGame = () => {
+    turnO = true;
+    enableBoxes();
+    msgcontainer.classList.add("hide");
 }
 resetbtn.addEventListener("click",resetGame);
