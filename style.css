@@ -1,14 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 body{
 background-color:lightblue;
+ margin: 0;
+    padding: 10px;
     text-align: center;
 }
 .container{
     height: 70vh;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,19 +22,18 @@ background-color:lightblue;
     
 }
 .game{
-    height: 60vh;
-    width: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
 
 
 }
 .box{
-    height: 18vh;
-    width: 18vh;
+     width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: clamp(25px, 8vw, 50px);
+    cursor: pointer;
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
@@ -53,4 +58,22 @@ background-color:lightblue;
 h1{
     color: #33393f;
     font-size: 50px;
+}
+@media (max-width: 480px) {
+    .container {
+        max-width: 90vw;
+    }
+
+    .box {
+        font-size: 12vw;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
 }
