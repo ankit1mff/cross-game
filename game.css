@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-image: url("pic.png");
+    font-family: 'Poppins', sans-serif;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px 10px;
+    text-align: center;
+}
+h1 {
+    color: #ffffff;
+    font-size: clamp(40px, 8vw, 55px);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
+    margin-bottom: 20px;
+}
+.container {
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+.box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: clamp(35px, 10vw, 60px);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #ffffff;  
+    background: rgba(192, 19, 19, 0.08);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+.resetbutton {
+    padding: 12px 35px;
+    font-size: 1.25rem;
+    border-radius:30px;
+    background: linear-gradient(45deg, #ff00ff, #00d2ff);
+    border: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+}
+.resetbutton:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.8);
+}
+
+#msg {
+    color: #00d2ff; 
+    font-size: clamp(30px, 6vw, 45px);
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 85vw;
+    }
+
+    .resetbutton {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+}
